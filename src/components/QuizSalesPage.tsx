@@ -170,11 +170,39 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
       </a>
 
       <p
-        className="font-body text-xs text-muted-foreground/60 mt-4 mb-8 text-center opacity-0 animate-fade-up"
+        className="font-body text-xs text-muted-foreground/60 mt-4 text-center opacity-0 animate-fade-up"
         style={{ animationDelay: "700ms" }}
       >
         Acesso imediato após a confirmação do pagamento
       </p>
+
+      {/* Garantia */}
+      <div
+        className="flex flex-col items-center mt-8 mb-8 opacity-0 animate-fade-up"
+        style={{ animationDelay: "750ms" }}
+      >
+        <div className="w-16 h-16 rounded-full border-2 border-primary/40 flex items-center justify-center mb-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-8 h-8 text-primary"
+          >
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+        </div>
+        <p className="font-display text-base font-semibold text-foreground">
+          7 dias de Garantia
+        </p>
+        <p className="font-body text-xs text-muted-foreground text-center mt-1 max-w-xs">
+          Se não fizer sentido para você, devolvemos 100% do seu investimento.
+        </p>
+      </div>
     </div>
   );
 };
