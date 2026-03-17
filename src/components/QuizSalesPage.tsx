@@ -1,4 +1,4 @@
-declare const fbq: any;
+const fbq = (window as any).fbq;
 import ebookCover from "@/assets/ebook-cover.png";
 import jessicaPhoto from "@/assets/testimonials/jessica.jpeg";
 import annePhoto from "@/assets/testimonials/anne.jpeg";
