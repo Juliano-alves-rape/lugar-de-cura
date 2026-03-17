@@ -121,14 +121,19 @@ const QuizApp = () => {
     [answers, currentQuestion]
   );
 
-  const handleGoToSales = useCallback(() => {
-    setTransitioning(true);
-    setTimeout(() => {
-      fbq('track', 'Lead');
-      setScreen("sales");
-      setTransitioning(false);
-    }, 400);
-  }, []);
+ const handleGoToSales = useCallback(() => {
+  setTransitioning(true);
+
+  setTimeout(() => {
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq('track', 'Lead');
+    }
+
+    setScreen("sales");
+    setTransitioning(false);
+  }, 400);
+
+}, []);
 
   return (
     <div className="min-h-screen bg-background linen-texture">
