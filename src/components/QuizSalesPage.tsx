@@ -1,3 +1,4 @@
+declare const fbq: any;
 import ebookCover from "@/assets/ebook-cover.png";
 import jessicaPhoto from "@/assets/testimonials/jessica.jpeg";
 import annePhoto from "@/assets/testimonials/anne.jpeg";
