@@ -24,6 +24,8 @@ function PixelInit() {
   `;
   document.head.appendChild(script);
 }, []);
+  return null;
+}
 createRoot(document.getElementById("root")!).render(
   <>
     <PixelInit />
