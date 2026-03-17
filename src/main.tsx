@@ -5,7 +5,6 @@ import { useEffect } from "react";
 
 function PixelInit() {
   useEffect(() => {
-    useEffect(() => {
   const script = document.createElement("script");
   script.innerHTML = `
     !function(f,b,e,v,n,t,s)
@@ -20,7 +19,7 @@ function PixelInit() {
     (window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '1266016016228195');
+    fbq('init', '1260016016228195');
     fbq('track', 'PageView');
   `;
   document.head.appendChild(script);
