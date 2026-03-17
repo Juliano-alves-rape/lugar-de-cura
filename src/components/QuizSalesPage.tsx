@@ -2,6 +2,7 @@ import ebookCover from "@/assets/ebook-cover.png";
 import jessicaPhoto from "@/assets/testimonials/jessica.jpeg";
 import annePhoto from "@/assets/testimonials/anne.jpeg";
 import julietePhoto from "@/assets/testimonials/juliete.jpeg";
+import fabiPhoto from "@/assets/testimonials/fabi.jpeg";
 
 const testimonials = [
   {
@@ -21,6 +22,12 @@ const testimonials = [
     text: "Ler À Mesa foi profundamente transformador para mim. Através do livro, o Senhor me levou a reconhecer e curar feridas que eu nem sabia que existiam. Pude compreender processos, restaurar minha identidade em Deus e tomar posse de quem eu sou Nele. À Mesa foi instrumento de cura, edificação e restauração na minha vida. ❤️✨",
     location: "",
     photo: julietePhoto,
+  },
+  {
+    name: "Fabiana Deni",
+    text: "O livro À Mesa tem feito grandes mudanças em nós aqui em casa, digo nós pois comecei uma leitura individual mas senti que deveria incluir meu esposo. Cada capítulo foi um aprendizado para nós com muita reflexão e crescimento. Já terminamos a leitura uma vez, porém eu senti que deveria iniciar 2026 lendo novamente e reescrevendo aquilo que já mudou... E o que mais o Senhor tem para mudar em mim? Ansiosa para descobrir 💖",
+    location: "",
+    photo: fabiPhoto,
   },
 ];
 
