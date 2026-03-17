@@ -12,6 +12,7 @@ const getFbq = () => {
 };
 
 const testimonials = [
+  },
   {
     name: "Jéssica Dias",
     text: "O Livro À Mesa pra mim me lembrou a importância da Mesa, mais me fez enxergar coisas que com o tempo vamos deixando de lado. Que muitas mulheres pode ser impactada e encontra uma luz para coisas que busca, a leitura me fez enxergar o quanto precisamos entender o tempo de todas as coisas!! Obrigada a pastora Sara pelo senhor usar você para escrever o livro e mostrar a importância que é necessário está na mesa com as pessoas certas.",
