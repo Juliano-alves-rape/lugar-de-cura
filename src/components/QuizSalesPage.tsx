@@ -1,8 +1,8 @@
-import ebookCover from "@/assets/ebook-cover.png";
-import jessicaPhoto from "@/assets/testimonials/jessica.jpeg";
-import annePhoto from "@/assets/testimonials/anne.jpeg";
-import julietePhoto from "@/assets/testimonials/juliete.jpeg";
-import fabiPhoto from "@/assets/testimonials/fabi.jpeg";
+import ebookCover from "../assets/ebook-cover.png";
+import jessicaPhoto from "../assets/testimonials/jessica.jpeg";
+import annePhoto from "../assets/testimonials/anne.jpeg";
+import julietePhoto from "../assets/testimonials/juliete.jpeg";
+import fabiPhoto from "../assets/testimonials/fabi.jpeg";
 const getFbq = () => {
   if (typeof window !== "undefined" && (window as any).fbq) {
     return (window as any).fbq;
@@ -187,7 +187,7 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
         href={CHECKOUT_URL}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => {
+   onClick={() => {
   const fbq = getFbq();
   fbq('track', 'InitiateCheckout');
 }}
