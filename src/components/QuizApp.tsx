@@ -1,5 +1,5 @@
 declare const fbq: any;
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import QuizTimer from "./QuizTimer";
 import QuizProgress from "./QuizProgress";
 import QuizOption from "./QuizOption";
