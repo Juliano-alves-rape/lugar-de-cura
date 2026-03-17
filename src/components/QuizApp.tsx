@@ -1,3 +1,4 @@
+declare const fbq: any;
 import { useState, useCallback } from "react";
 import QuizTimer from "./QuizTimer";
 import QuizProgress from "./QuizProgress";
@@ -82,11 +83,16 @@ type Screen = "intro" | "quiz" | "result" | "sales";
 
 const QuizApp = () => {
   const [screen, setScreen] = useState<Screen>("intro");
+  const [screen, setScreen] = useState<Screen>("intro");
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
-
+  useEffect(() => {
+    if (screen === "sales") {
+      fbq('track', 'ViewContent');
+    }
+  }, [screen]);
   const handleStart = useCallback(() => {
     setTransitioning(true);
     setTimeout(() => {
@@ -119,6 +125,7 @@ const QuizApp = () => {
   const handleGoToSales = useCallback(() => {
     setTransitioning(true);
     setTimeout(() => {
+      fbq('track', 'Lead');
       setScreen("sales");
       setTransitioning(false);
     }, 400);
