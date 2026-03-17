@@ -3,6 +3,7 @@ import jessicaPhoto from "../assets/testimonials/jessica.jpeg";
 import annePhoto from "../assets/testimonials/anne.jpeg";
 import julietePhoto from "../assets/testimonials/juliete.jpeg";
 import fabiPhoto from "../assets/testimonials/fabi.jpeg";
+
 const getFbq = () => {
   if (typeof window !== "undefined" && (window as any).fbq) {
     return (window as any).fbq;
@@ -15,8 +16,8 @@ const testimonials = [
     text: "O Livro À Mesa pra mim me lembrou a importância da Mesa, mais me fez enxergar coisas que com o tempo vamos deixando de lado. Que muitas mulheres pode ser impactada e encontra uma luz para coisas que busca, a leitura me fez enxergar o quanto precisamos entender o tempo de todas as coisas!! Obrigada a pastora Sara pelo senhor usar você para escrever o livro e mostrar a importância que é necessário está na mesa com as pessoas certas.",
     location: "",
     photo: jessicaPhoto,
-  },
-  {
+ },
+{
     name: "Anne Gabrielle",
     text: "O livro realmente nos conduz à mesa: a sentar, refletir, observar com mais atenção e viver de uma nova forma. Ele nos leva a analisar identidade, propósito e posição, com profundidade e verdade. Mais do que isso, nos conduz a um relacionamento mais profundo com Cristo e com as Escrituras, despertando fome pela Palavra e intimidade com Deus. Ler seu testemunho, ver como uma história de vida gerou a mulher e pastora que a senhora é hoje, traz direção, esperança e reflexões tão necessárias para os nossos dias. A Mesa não é apenas um livro, é um convite ao lugar certo.",
     location: "",
