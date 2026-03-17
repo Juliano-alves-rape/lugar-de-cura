@@ -83,7 +83,6 @@ type Screen = "intro" | "quiz" | "result" | "sales";
 
 const QuizApp = () => {
   const [screen, setScreen] = useState<Screen>("intro");
-  const [screen, setScreen] = useState<Screen>("intro");
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
