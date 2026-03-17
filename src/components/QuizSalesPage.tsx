@@ -108,19 +108,30 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
               <p className="font-body text-sm text-muted-foreground leading-relaxed italic mb-3">
                 &ldquo;{t.text}&rdquo;
               </p>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="font-body text-xs font-bold text-primary">
-                    {t.name.charAt(0)}
-                  </span>
-                </div>
+              <div className="flex items-center gap-3">
+                {t.photo ? (
+                  <img
+                    src={t.photo}
+                    alt={t.name}
+                    className="w-10 h-10 rounded-full object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="font-body text-xs font-bold text-primary">
+                      {t.name.charAt(0)}
+                    </span>
+                  </div>
+                )}
                 <div>
                   <p className="font-body text-sm font-semibold text-foreground">
                     {t.name}
                   </p>
-                  <p className="font-body text-xs text-muted-foreground">
-                    {t.location}
-                  </p>
+                  {t.location && (
+                    <p className="font-body text-xs text-muted-foreground">
+                      {t.location}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
