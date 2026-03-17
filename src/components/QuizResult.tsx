@@ -116,8 +116,9 @@ const QuizResult = ({ transitioning, answers, onContinue }: QuizResultProps) => 
         className="opacity-0 animate-fade-up w-full max-w-sm px-10 py-5 bg-primary text-primary-foreground font-body font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110"
         style={{ animationDelay: "550ms" }}
       >
-        Quero conhecer o ebook
-      </button>
+       <button onClick={() => setScreen("sales")}>
+  Quero conhecer o ebook
+</button>
 
       <p
         className="font-body text-xs text-muted-foreground/60 mt-3 text-center opacity-0 animate-fade-up"
