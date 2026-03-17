@@ -1,6 +1,7 @@
 import ebookCover from "@/assets/ebook-cover.png";
 import jessicaPhoto from "@/assets/testimonials/jessica.jpeg";
 import annePhoto from "@/assets/testimonials/anne.jpeg";
+import julietePhoto from "@/assets/testimonials/juliete.jpeg";
 
 const testimonials = [
   {
@@ -14,6 +15,12 @@ const testimonials = [
     text: "O livro realmente nos conduz à mesa: a sentar, refletir, observar com mais atenção e viver de uma nova forma. Ele nos leva a analisar identidade, propósito e posição, com profundidade e verdade. Mais do que isso, nos conduz a um relacionamento mais profundo com Cristo e com as Escrituras, despertando fome pela Palavra e intimidade com Deus. Ler seu testemunho, ver como uma história de vida gerou a mulher e pastora que a senhora é hoje, traz direção, esperança e reflexões tão necessárias para os nossos dias. A Mesa não é apenas um livro, é um convite ao lugar certo.",
     location: "",
     photo: annePhoto,
+  },
+  {
+    name: "Juliete Pimenta",
+    text: "Ler À Mesa foi profundamente transformador para mim. Através do livro, o Senhor me levou a reconhecer e curar feridas que eu nem sabia que existiam. Pude compreender processos, restaurar minha identidade em Deus e tomar posse de quem eu sou Nele. À Mesa foi instrumento de cura, edificação e restauração na minha vida. ❤️✨",
+    location: "",
+    photo: julietePhoto,
   },
 ];
 
