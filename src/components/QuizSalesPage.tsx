@@ -182,6 +182,7 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
         href={CHECKOUT_URL}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => fbq('track', 'InitiateCheckout')}
         className="opacity-0 animate-fade-up w-full max-w-sm block text-center px-10 py-5 bg-primary text-primary-foreground font-body font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110"
         style={{ animationDelay: "650ms" }}
       >
