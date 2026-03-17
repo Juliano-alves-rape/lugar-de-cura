@@ -1,28 +1,15 @@
 import ebookCover from "@/assets/ebook-cover.png";
+import jessicaPhoto from "@/assets/testimonials/jessica.jpeg";
 
 const CHECKOUT_URL =
   "https://pay.hotmart.com/M103584940S?checkoutMode=10&_gl=1*ftfxb0*_gcl_au*MTg3MDU2NzcyNi4xNzY3MDQ5MDcxLjk4ODU5Mjk2Ni4xNzY3MDU1MTgyLjE3NjcwNTUxODI.*FPAU*MTg3MDU2NzcyNi4xNzY3MDQ5MDcx*_ga*MjY5Mzk3MTg2LjE3NTU0NjI4MDI.*_ga_GQH2V1F11Q*czE3NjcwOTQyNzAkbzQkZzEkdDE3NjcwOTQ2OTUkajQ5JGwwJGgw&bid=1767094706241";
 
 const testimonials = [
   {
-    name: "Camila R.",
-    text: "Esse ebook me fez chorar de cura. Cada capítulo parecia que Deus estava falando diretamente comigo. Recomendo de olhos fechados.",
-    location: "São Paulo, SP",
-  },
-  {
-    name: "Ana Paula M.",
-    text: "Eu estava num momento de crise com minha identidade e esse livro me trouxe de volta para os braços de Deus. Leitura obrigatória para toda mulher cristã.",
-    location: "Belo Horizonte, MG",
-  },
-  {
-    name: "Juliana S.",
-    text: "Li em uma tarde e já quero reler. As reflexões são profundas, práticas e cheias do Espírito Santo. Me senti abraçada por Deus.",
-    location: "Curitiba, PR",
-  },
-  {
-    name: "Raquel F.",
-    text: "Indiquei para todas as minhas amigas do grupo de oração. É um livro que transforma de verdade.",
-    location: "Recife, PE",
+    name: "Jéssica Dias",
+    text: "O Livro À Mesa pra mim me lembrou a importância da Mesa, mais me fez enxergar coisas que com o tempo vamos deixando de lado. Que muitas mulheres pode ser impactada e encontra uma luz para coisas que busca, a leitura me fez enxergar o quanto precisamos entender o tempo de todas as coisas!! Obrigada a pastora Sara pelo senhor usar você para escrever o livro e mostrar a importância que é necessário está na mesa com as pessoas certas.",
+    location: "",
+    photo: jessicaPhoto,
   },
 ];
 
@@ -121,19 +108,30 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
               <p className="font-body text-sm text-muted-foreground leading-relaxed italic mb-3">
                 &ldquo;{t.text}&rdquo;
               </p>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="font-body text-xs font-bold text-primary">
-                    {t.name.charAt(0)}
-                  </span>
-                </div>
+              <div className="flex items-center gap-3">
+                {t.photo ? (
+                  <img
+                    src={t.photo}
+                    alt={t.name}
+                    className="w-10 h-10 rounded-full object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="font-body text-xs font-bold text-primary">
+                      {t.name.charAt(0)}
+                    </span>
+                  </div>
+                )}
                 <div>
                   <p className="font-body text-sm font-semibold text-foreground">
                     {t.name}
                   </p>
-                  <p className="font-body text-xs text-muted-foreground">
-                    {t.location}
-                  </p>
+                  {t.location && (
+                    <p className="font-body text-xs text-muted-foreground">
+                      {t.location}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
