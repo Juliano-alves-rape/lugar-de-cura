@@ -1,8 +1,6 @@
 import ebookCover from "@/assets/ebook-cover.png";
 import jessicaPhoto from "@/assets/testimonials/jessica.jpeg";
-
-const CHECKOUT_URL =
-  "https://pay.hotmart.com/M103584940S?checkoutMode=10&_gl=1*ftfxb0*_gcl_au*MTg3MDU2NzcyNi4xNzY3MDQ5MDcxLjk4ODU5Mjk2Ni4xNzY3MDU1MTgyLjE3NjcwNTUxODI.*FPAU*MTg3MDU2NzcyNi4xNzY3MDQ5MDcx*_ga*MjY5Mzk3MTg2LjE3NTU0NjI4MDI.*_ga_GQH2V1F11Q*czE3NjcwOTQyNzAkbzQkZzEkdDE3NjcwOTQ2OTUkajQ5JGwwJGgw&bid=1767094706241";
+import annePhoto from "@/assets/testimonials/anne.jpeg";
 
 const testimonials = [
   {
@@ -11,7 +9,16 @@ const testimonials = [
     location: "",
     photo: jessicaPhoto,
   },
+  {
+    name: "Anne Gabrielle",
+    text: "O livro realmente nos conduz à mesa: a sentar, refletir, observar com mais atenção e viver de uma nova forma. Ele nos leva a analisar identidade, propósito e posição, com profundidade e verdade. Mais do que isso, nos conduz a um relacionamento mais profundo com Cristo e com as Escrituras, despertando fome pela Palavra e intimidade com Deus. Ler seu testemunho, ver como uma história de vida gerou a mulher e pastora que a senhora é hoje, traz direção, esperança e reflexões tão necessárias para os nossos dias. A Mesa não é apenas um livro, é um convite ao lugar certo.",
+    location: "",
+    photo: annePhoto,
+  },
 ];
+
+const CHECKOUT_URL =
+  "https://pay.hotmart.com/M103584940S?checkoutMode=10&_gl=1*ftfxb0*_gcl_au*MTg3MDU2NzcyNi4xNzY3MDQ5MDcxLjk4ODU5Mjk2Ni4xNzY3MDU1MTgyLjE3NjcwNTUxODI.*FPAU*MTg3MDU2NzcyNi4xNzY3MDQ5MDcx*_ga*MjY5Mzk3MTg2LjE3NTU0NjI4MDI.*_ga_GQH2V1F11Q*czE3NjcwOTQyNzAkbzQkZzEkdDE3NjcwOTQ2OTUkajQ5JGwwJGgw&bid=1767094706241";
 
 interface QuizSalesPageProps {
   transitioning: boolean;
