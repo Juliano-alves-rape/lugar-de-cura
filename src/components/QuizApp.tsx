@@ -15,7 +15,7 @@ import QuizSalesPage from "./QuizSalesPage";
       "Tenho fé, mas me sinto cansada emocionalmente",
       "Sinto que Deus tem algo para mim, mas não consigo viver isso",
     ],
-];
+  },
   {
     question:
       "Quando você pensa sobre sua caminhada com Deus, o que mais pesa no seu coração?",
