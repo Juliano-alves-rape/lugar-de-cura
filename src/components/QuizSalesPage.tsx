@@ -1,4 +1,4 @@
-import ebookCover from "../assets/ebook-cover.png";
+import ebookCover from "../assets/ebook-mockup-3d.png";
 import jessicaPhoto from "../assets/testimonials/jessica.jpeg";
 import annePhoto from "../assets/testimonials/anne.jpeg";
 import julietePhoto from "../assets/testimonials/juliete.jpeg";
@@ -80,15 +80,16 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
         </p>
       </div>
 
-      {/* Ebook cover */}
+      {/* Ebook 3D Mockup */}
       <div
-        className="w-full max-w-xs mb-8 opacity-0 animate-fade-up"
+        className="w-full max-w-sm mb-10 opacity-0 animate-fade-up relative"
         style={{ animationDelay: "300ms" }}
       >
+        <div className="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-110 -z-10" />
         <img
           src={ebookCover}
-          alt="Ebook À Mesa — Coração curado, identidade restaurada e propósito destravado"
-          className="w-full rounded-lg shadow-2xl"
+          alt="Livro À Mesa — Coração curado, identidade restaurada e propósito destravado"
+          className="w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.2)] transition-all duration-500 hover:scale-[1.02]"
           loading="lazy"
         />
       </div>
