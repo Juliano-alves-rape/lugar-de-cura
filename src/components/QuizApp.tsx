@@ -89,8 +89,9 @@ const QuizApp = () => {
   useEffect(() => {
     if (screen === "sales") {
       if (typeof window !== "undefined" && window.fbq) {
-  window.fbq('track', 'ViewContent');
-}
+        window.fbq('track', 'ViewContent');
+      }
+    }
   }, [screen]);
   const handleStart = useCallback(() => {
     setTransitioning(true);

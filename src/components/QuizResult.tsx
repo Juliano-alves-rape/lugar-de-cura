@@ -112,7 +112,7 @@ const QuizResult = ({ transitioning, answers, onContinue }: QuizResultProps) => 
       </div>
 
   <button
-  onClick={() => setScreen("sales")}
+  onClick={onContinue}
   className="opacity-0 animate-fade-up w-full max-w-sm px-10 py-5 bg-primary text-primary-foreground font-body font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
   style={{ animationDelay: "550ms" }}
 >
