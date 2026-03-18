@@ -15,6 +15,7 @@ import QuizSalesPage from "./QuizSalesPage";
       "Tenho fé, mas me sinto cansada emocionalmente",
       "Sinto que Deus tem algo para mim, mas não consigo viver isso",
     ],
+  },
   {
     question:
       "Quando você pensa sobre sua caminhada com Deus, o que mais pesa no seu coração?",
@@ -87,9 +88,10 @@ const QuizApp = () => {
   const [transitioning, setTransitioning] = useState(false);
   useEffect(() => {
     if (screen === "sales") {
-      if (typeof window !== "undefined" && window.fbq) {
-  window.fbq('track', 'ViewContent');
-}
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        (window as any).fbq('track', 'ViewContent');
+      }
+    }
   }, [screen]);
   const handleStart = useCallback(() => {
     setTransitioning(true);
@@ -124,8 +126,8 @@ const QuizApp = () => {
   setTransitioning(true);
 
   setTimeout(() => {
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq('track', 'Lead');
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
     }
 
     setScreen("sales");
