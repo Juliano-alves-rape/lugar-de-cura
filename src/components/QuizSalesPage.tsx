@@ -1,4 +1,4 @@
-import ebookCover from "../assets/ebook-cover.png";
+import ebookCover from "../assets/ebook-mockup-3d.png";
 import jessicaPhoto from "../assets/testimonials/jessica.jpeg";
 import annePhoto from "../assets/testimonials/anne.jpeg";
 import julietePhoto from "../assets/testimonials/juliete.jpeg";
