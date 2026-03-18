@@ -5,7 +5,6 @@ import QuizProgress from "./QuizProgress";
 import QuizOption from "./QuizOption";
 import QuizResult from "./QuizResult";
 import QuizSalesPage from "./QuizSalesPage";
-const questions = [
   {
     question:
       "Você sente que sua vida espiritual hoje está mais próxima de qual dessas situações?",
