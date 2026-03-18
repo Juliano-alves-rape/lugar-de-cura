@@ -88,8 +88,8 @@ const QuizApp = () => {
   const [transitioning, setTransitioning] = useState(false);
   useEffect(() => {
     if (screen === "sales") {
-      if (typeof window !== "undefined" && window.fbq) {
-        window.fbq('track', 'ViewContent');
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        (window as any).fbq('track', 'ViewContent');
       }
     }
   }, [screen]);
