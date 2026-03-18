@@ -7,14 +7,15 @@ import QuizResult from "./QuizResult";
 import QuizSalesPage from "./QuizSalesPage";
    const questions = [
   {
-   question: "Você sente que sua vida espiritual hoje está mais próxima de qual dessas situações?",
+   question: 
+      "Você sente que sua vida espiritual hoje está mais próxima de qual dessas situações?",
     options: [
       "Amo a Deus, mas sinto que algo dentro de mim ainda precisa ser curado",
       "Sinto que perdi minha identidade e não sei mais quem sou em Deus",
       "Tenho fé, mas me sinto cansada emocionalmente",
       "Sinto que Deus tem algo para mim, mas não consigo viver isso",
     ],
-  },
+];
   {
     question:
       "Quando você pensa sobre sua caminhada com Deus, o que mais pesa no seu coração?",
