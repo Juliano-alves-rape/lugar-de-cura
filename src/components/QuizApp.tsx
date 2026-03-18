@@ -126,8 +126,8 @@ const QuizApp = () => {
   setTransitioning(true);
 
   setTimeout(() => {
-    if (typeof window !== "undefined" && window.fbq) {
-      window.fbq('track', 'Lead');
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
     }
 
     setScreen("sales");
