@@ -63,9 +63,17 @@ const CHECKOUT_URL =
 
 interface QuizSalesPageProps {
   transitioning: boolean;
+  answers: number[];
 }
 
-const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
+const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
+  const profile = useMemo(() => {
+    const scores = [0, 0, 0, 0];
+    answers.forEach((a) => {
+      if (a >= 0 && a <= 3) scores[a]++;
+    });
+    return salesProfiles[scores.indexOf(Math.max(...scores))];
+  }, [answers]);
   return (
     <div
       className={`min-h-[80vh] flex flex-col items-center pt-8 transition-opacity duration-400 ${
