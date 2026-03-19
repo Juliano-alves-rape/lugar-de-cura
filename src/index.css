@@ -6,41 +6,41 @@
 
 @layer base {
   :root {
-    --background: 40 33% 97%;
-    --foreground: 24 7% 24%;
+    --background: 36 33% 97%;
+    --foreground: 0 0% 10%;
 
-    --card: 30 25% 96%;
-    --card-foreground: 24 7% 24%;
+    --card: 33 25% 95%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 40 33% 97%;
-    --popover-foreground: 24 7% 24%;
+    --popover: 36 33% 97%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 40 45% 55%;
-    --primary-foreground: 40 33% 97%;
+    --primary: 38 60% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 15 40% 87%;
-    --secondary-foreground: 24 7% 24%;
+    --secondary: 28 30% 88%;
+    --secondary-foreground: 0 0% 10%;
 
     --muted: 30 20% 93%;
-    --muted-foreground: 24 7% 40%;
+    --muted-foreground: 0 0% 35%;
 
-    --accent: 15 40% 87%;
-    --accent-foreground: 24 7% 24%;
+    --accent: 28 30% 88%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
     --border: 30 20% 88%;
     --input: 30 20% 88%;
-    --ring: 40 45% 55%;
+    --ring: 38 60% 50%;
 
     --radius: 0.5rem;
 
-    --gold: 40 45% 55%;
-    --gold-light: 40 50% 70%;
-    --rose: 15 40% 87%;
-    --linen: 40 33% 97%;
-    --charcoal: 24 7% 24%;
+    --gold: 38 60% 50%;
+    --gold-light: 38 55% 65%;
+    --rose: 28 30% 88%;
+    --linen: 36 33% 97%;
+    --charcoal: 0 0% 10%;
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'Montserrat', sans-serif;

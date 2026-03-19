@@ -17,10 +17,10 @@ const testimonials = [
     text: "O Livro À Mesa pra mim me lembrou a importância da Mesa, mais me fez enxergar coisas que com o tempo vamos deixando de lado. Que muitas mulheres pode ser impactada e encontra uma luz para coisas que busca, a leitura me fez enxergar o quanto precisamos entender o tempo de todas as coisas!! Obrigada a pastora Sara pelo senhor usar você para escrever o livro e mostrar a importância que é necessário está na mesa com as pessoas certas.",
     location: "",
     photo: jessicaPhoto,
- },
-{
+  },
+  {
     name: "Anne Gabrielle",
-    text: "O livro realmente nos conduz à mesa: a sentar, refletir, observar com mais atenção e viver de uma nova forma. Ele nos leva a analisar identidade, propósito e posição, com profundidade e verdade. Mais do que isso, nos conduz a um relacionamento mais profundo com Cristo e com as Escrituras, despertando fome pela Palavra e intimidade com Deus. Ler seu testemunho, ver como uma história de vida gerou a mulher e pastora que a senhora é hoje, traz direção, esperança e reflexões tão necessárias para os nossos dias. A Mesa não é apenas um livro, é um convite ao lugar certo.",
+    text: "O livro realmente nos conduz à mesa: a sentar, refletir, observar com mais atenção e viver de uma nova forma. Ele nos leva a analisar identidade, propósito e posição, com profundidade e verdade. Mais do que isso, nos conduz a um relacionamento mais profundo com Cristo e com as Escrituras, despertando fome pela Palavra e intimidade com Deus.",
     location: "",
     photo: annePhoto,
   },
@@ -32,7 +32,7 @@ const testimonials = [
   },
   {
     name: "Fabiana Deni",
-    text: "O livro À Mesa tem feito grandes mudanças em nós aqui em casa, digo nós pois comecei uma leitura individual mas senti que deveria incluir meu esposo. Cada capítulo foi um aprendizado para nós com muita reflexão e crescimento. Já terminamos a leitura uma vez, porém eu senti que deveria iniciar 2026 lendo novamente e reescrevendo aquilo que já mudou... E o que mais o Senhor tem para mudar em mim? Ansiosa para descobrir 💖",
+    text: "O livro À Mesa tem feito grandes mudanças em nós aqui em casa, digo nós pois comecei uma leitura individual mas senti que deveria incluir meu esposo. Cada capítulo foi um aprendizado para nós com muita reflexão e crescimento.",
     location: "",
     photo: fabiPhoto,
   },
@@ -55,10 +55,10 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
       <div className="w-16 h-0.5 bg-primary mx-auto mb-8 opacity-0 animate-fade-up" />
 
       <h2
-        className="font-display text-2xl md:text-3xl font-semibold text-foreground text-center leading-tight mb-6 opacity-0 animate-fade-up"
+        className="font-display text-2xl md:text-3xl font-semibold text-foreground text-center leading-tight mb-4 opacity-0 animate-fade-up"
         style={{ animationDelay: "100ms" }}
       >
-        Talvez Deus esteja te chamando para a mesa dEle.
+        Você não precisa continuar se sentindo assim
       </h2>
 
       <div
@@ -66,17 +66,18 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
         style={{ animationDelay: "200ms" }}
       >
         <p className="font-body text-base text-muted-foreground leading-relaxed">
-          A mesa de Deus é um lugar de{" "}
-          <span className="font-semibold text-foreground">restauração</span>.
-        </p>
-        <p className="font-body text-base text-muted-foreground leading-relaxed">
-          Um lugar onde identidades são reconstruídas, feridas são tratadas e o
-          coração encontra descanso.
+          Existe um caminho claro para{" "}
+          <span className="font-semibold text-foreground">
+            restaurar sua identidade em Deus
+          </span>{" "}
+          e viver com direção.
         </p>
         <p className="font-body text-base text-foreground leading-relaxed font-medium">
-          O ebook{" "}
-          <span className="font-display italic">&ldquo;À Mesa&rdquo;</span> foi
-          escrito exatamente para conduzir você nesse processo.
+          Com base no seu resultado, esse é o próximo passo ideal pra você.
+        </p>
+        <p className="font-body text-sm text-muted-foreground leading-relaxed">
+          Esse ebook foi criado para te guiar passo a passo na sua restauração
+          espiritual.
         </p>
       </div>
 
@@ -104,16 +105,16 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
         </p>
         <ul className="space-y-3">
           {[
-            "Reflexões bíblicas profundas",
-            "Direcionamentos práticos para sua vida espiritual",
-            "Caminhos de cura interior",
-            "Um reencontro com sua identidade em Cristo",
+            "Entenda quem você é em Deus",
+            "Rompa bloqueios emocionais",
+            "Encontre direção e paz",
+            "Caminhos de cura interior guiados pela Palavra",
           ].map((item, i) => (
             <li
               key={i}
               className="flex items-start gap-3 font-body text-sm text-muted-foreground"
             >
-              <span className="text-primary mt-0.5">✦</span>
+              <span className="text-primary mt-0.5">✔</span>
               {item}
             </li>
           ))}
@@ -168,21 +169,20 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
         </div>
       </div>
 
-      {/* Social proof count */}
+      {/* Social proof */}
       <p
-        className="font-body text-sm text-muted-foreground italic text-center mb-2 opacity-0 animate-fade-up"
+        className="font-body text-sm text-muted-foreground italic text-center mb-4 opacity-0 animate-fade-up"
         style={{ animationDelay: "550ms" }}
       >
-        &ldquo;Centenas de mulheres já iniciaram esse processo de
-        restauração.&rdquo;
+        Mais de 1.193 mulheres já iniciaram esse processo
       </p>
 
-      {/* Urgency */}
+      {/* Price */}
       <p
         className="font-body text-xs text-primary font-semibold tracking-wide uppercase text-center mb-6 animate-gold-pulse opacity-0 animate-fade-up"
         style={{ animationDelay: "600ms" }}
       >
-        Oferta especial disponível hoje — R$ 27,00
+        Por apenas R$ 27,00
       </p>
 
       {/* CTA */}
@@ -190,14 +190,14 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
         href={CHECKOUT_URL}
         target="_blank"
         rel="noopener noreferrer"
-   onClick={() => {
-  const fbq = getFbq();
-  fbq('track', 'InitiateCheckout');
-}}
-        className="opacity-0 animate-fade-up w-full max-w-sm block text-center px-10 py-5 bg-primary text-primary-foreground font-body font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110"
+        onClick={() => {
+          const fbq = getFbq();
+          fbq("track", "InitiateCheckout");
+        }}
+        className="opacity-0 animate-fade-up w-full max-w-sm block text-center px-10 py-5 bg-primary text-primary-foreground font-body font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
         style={{ animationDelay: "650ms" }}
       >
-        Quero sentar à mesa com Deus
+        👉 Quero começar minha restauração agora
       </a>
 
       <p
