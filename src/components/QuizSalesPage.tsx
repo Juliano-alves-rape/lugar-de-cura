@@ -96,15 +96,15 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
         <p className="font-body text-base text-muted-foreground leading-relaxed">
           Existe um caminho claro para{" "}
           <span className="font-semibold text-foreground">
-            restaurar sua identidade em Deus
+            {profile.emphasis}
           </span>{" "}
-          e viver com direção.
+          e {profile.reward}.
         </p>
         <p className="font-body text-base text-foreground leading-relaxed font-medium">
           Com base no seu resultado, esse é o próximo passo ideal pra você.
         </p>
         <p className="font-body text-sm text-muted-foreground leading-relaxed">
-          Esse ebook foi criado para te guiar passo a passo na sua restauração
+          Esse Livro foi criado para te guiar passo a passo na sua restauração
           espiritual.
         </p>
       </div>

@@ -235,7 +235,7 @@ const QuizApp = () => {
 
           {/* SALES SCREEN */}
           {screen === "sales" && (
-            <QuizSalesPage transitioning={transitioning} />
+            <QuizSalesPage transitioning={transitioning} answers={answers} />
           )}
         </div>
       </div>
