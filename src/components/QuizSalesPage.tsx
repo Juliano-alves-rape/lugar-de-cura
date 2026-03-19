@@ -1,8 +1,28 @@
+import { useMemo } from "react";
 import ebookCover from "../assets/ebook-mockup-3d.png";
 import jessicaPhoto from "../assets/testimonials/jessica.jpeg";
 import annePhoto from "../assets/testimonials/anne.jpeg";
 import julietePhoto from "../assets/testimonials/juliete.jpeg";
 import fabiPhoto from "../assets/testimonials/fabi.jpeg";
+
+const salesProfiles = [
+  {
+    emphasis: "curar suas feridas emocionais",
+    reward: "viver com leveza e liberdade interior",
+  },
+  {
+    emphasis: "restaurar sua identidade em Deus",
+    reward: "viver com direção e segurança",
+  },
+  {
+    emphasis: "se reconectar profundamente com Deus",
+    reward: "sentir Sua presença de forma real",
+  },
+  {
+    emphasis: "descobrir seu propósito",
+    reward: "caminhar com clareza e confiança",
+  },
+];
 
 const getFbq = () => {
   if (typeof window !== "undefined" && (window as any).fbq) {
