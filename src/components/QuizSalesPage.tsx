@@ -1,8 +1,28 @@
+import { useMemo } from "react";
 import ebookCover from "../assets/ebook-mockup-3d.png";
 import jessicaPhoto from "../assets/testimonials/jessica.jpeg";
 import annePhoto from "../assets/testimonials/anne.jpeg";
 import julietePhoto from "../assets/testimonials/juliete.jpeg";
 import fabiPhoto from "../assets/testimonials/fabi.jpeg";
+
+const salesProfiles = [
+  {
+    emphasis: "curar suas feridas emocionais",
+    reward: "viver com leveza e liberdade interior",
+  },
+  {
+    emphasis: "restaurar sua identidade em Deus",
+    reward: "viver com direção e segurança",
+  },
+  {
+    emphasis: "se reconectar profundamente com Deus",
+    reward: "sentir Sua presença de forma real",
+  },
+  {
+    emphasis: "descobrir seu propósito",
+    reward: "caminhar com clareza e confiança",
+  },
+];
 
 const getFbq = () => {
   if (typeof window !== "undefined" && (window as any).fbq) {
@@ -43,9 +63,17 @@ const CHECKOUT_URL =
 
 interface QuizSalesPageProps {
   transitioning: boolean;
+  answers: number[];
 }
 
-const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
+const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
+  const profile = useMemo(() => {
+    const scores = [0, 0, 0, 0];
+    answers.forEach((a) => {
+      if (a >= 0 && a <= 3) scores[a]++;
+    });
+    return salesProfiles[scores.indexOf(Math.max(...scores))];
+  }, [answers]);
   return (
     <div
       className={`min-h-[80vh] flex flex-col items-center pt-8 transition-opacity duration-400 ${
@@ -68,15 +96,15 @@ const QuizSalesPage = ({ transitioning }: QuizSalesPageProps) => {
         <p className="font-body text-base text-muted-foreground leading-relaxed">
           Existe um caminho claro para{" "}
           <span className="font-semibold text-foreground">
-            restaurar sua identidade em Deus
+            {profile.emphasis}
           </span>{" "}
-          e viver com direção.
+          e {profile.reward}.
         </p>
         <p className="font-body text-base text-foreground leading-relaxed font-medium">
           Com base no seu resultado, esse é o próximo passo ideal pra você.
         </p>
         <p className="font-body text-sm text-muted-foreground leading-relaxed">
-          Esse ebook foi criado para te guiar passo a passo na sua restauração
+          Esse Livro foi criado para te guiar passo a passo na sua restauração
           espiritual.
         </p>
       </div>
