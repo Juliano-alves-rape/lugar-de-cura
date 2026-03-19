@@ -121,6 +121,18 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
           className="w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.2)] transition-all duration-500 hover:scale-[1.02]"
           loading="lazy"
         />
+        <a
+          href={CHECKOUT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => {
+            const fbq = getFbq();
+            fbq("track", "InitiateCheckout");
+          }}
+          className="mt-6 w-full max-w-xs block text-center px-8 py-4 bg-primary text-primary-foreground font-body font-bold text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+        >
+          👉 Quero começar minha restauração agora
+        </a>
       </div>
 
       {/* Benefits */}
