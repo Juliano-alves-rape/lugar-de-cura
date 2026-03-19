@@ -11,36 +11,42 @@ const resultProfiles = [
     title: "Cura Interior",
     icon: "💛",
     description:
-      "Seu coração carrega feridas que precisam ser tratadas na presença de Deus. Ele quer te conduzir a um processo profundo de cura — onde cada dor será tocada pelo Seu amor.",
-    verse: "\"Ele sara os quebrantados de coração e lhes pensa as feridas.\" — Salmos 147:3",
+      "Você carrega dores emocionais que ainda não foram tratadas. Deus quer te conduzir a um processo profundo de cura.",
+    cta: "Quero começar minha cura",
+    verse:
+      '"Ele sara os quebrantados de coração e lhes pensa as feridas." — Salmos 147:3',
   },
   {
     title: "Restauração da Identidade",
     icon: "👑",
     description:
-      "Você tem buscado saber quem realmente é em Deus. É hora de redescobrir sua identidade como filha amada, escolhida e com propósito — sentada à mesa dEle.",
-    verse: "\"Mas vós sois geração eleita, sacerdócio real, nação santa.\" — 1 Pedro 2:9",
+      "Você está vivendo um momento de desconexão com quem Deus te chamou pra ser. É hora de redescobrir sua identidade como filha amada.",
+    cta: "Quero restaurar minha identidade",
+    verse:
+      '"Mas vós sois geração eleita, sacerdócio real, nação santa." — 1 Pedro 2:9',
+  },
+  {
+    title: "Reconexão Espiritual",
+    icon: "🕊️",
+    description:
+      "Você sente que perdeu sua conexão com Deus. Ele está te chamando de volta para perto dEle.",
+    cta: "Quero me reconectar com Deus",
+    verse:
+      '"Chegai-vos a Deus, e ele se chegará a vós." — Tiago 4:8',
   },
   {
     title: "Direção e Propósito",
-    icon: "🕊️",
+    icon: "🔥",
     description:
-      "Deus tem um caminho preparado para você, e Ele quer te dar clareza e direção. É tempo de destravar o propósito que Ele plantou no seu coração.",
-    verse: "\"Eu é que sei os planos que tenho para vocês... planos de dar-lhes esperança e um futuro.\" — Jeremias 29:11",
-  },
-  {
-    title: "Paz e Descanso Espiritual",
-    icon: "☕",
-    description:
-      "Seu coração precisa de descanso. Deus está te chamando para se assentar à mesa dEle, largar o peso da ansiedade e encontrar a paz que só Ele pode dar.",
-    verse: "\"Vinde a mim, todos os que estais cansados e sobrecarregados, e eu vos aliviarei.\" — Mateus 11:28",
+      "Você sabe que tem algo maior, mas não consegue viver isso. Deus quer te dar clareza e direção.",
+    cta: "Quero descobrir meu propósito",
+    verse:
+      '"Eu é que sei os planos que tenho para vocês... planos de dar-lhes esperança e um futuro." — Jeremias 29:11',
   },
 ];
 
 const QuizResult = ({ transitioning, answers, onContinue }: QuizResultProps) => {
   const profile = useMemo(() => {
-    // Simple scoring: count which category appears most
-    // Options map: 0=cura, 1=identidade, 2=propósito, 3=paz
     const scores = [0, 0, 0, 0];
     answers.forEach((answer) => {
       if (answer >= 0 && answer <= 3) {
@@ -103,21 +109,18 @@ const QuizResult = ({ transitioning, answers, onContinue }: QuizResultProps) => 
           Existe um caminho para essa restauração.
         </p>
         <p className="font-body text-sm text-muted-foreground text-center">
-          Deus preparou uma mesa para você — e o ebook{" "}
-          <span className="font-display italic font-semibold text-foreground">
-            "À Mesa"
-          </span>{" "}
-          foi escrito para te guiar nesse processo.
+          Com base no seu resultado, esse é o próximo passo ideal pra você.
         </p>
       </div>
 
-  <button
-  onClick={onContinue}
-  className="opacity-0 animate-fade-up w-full max-w-sm px-10 py-5 bg-primary text-primary-foreground font-body font-bold text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
-  style={{ animationDelay: "550ms" }}
->
-  Quero conhecer o ebook
-</button>
+      <button
+        onClick={onContinue}
+        className="opacity-0 animate-fade-up w-full max-w-sm px-10 py-5 bg-primary text-primary-foreground font-body font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
+        style={{ animationDelay: "550ms" }}
+      >
+        {profile.cta}
+      </button>
+
       <p
         className="font-body text-xs text-muted-foreground/60 mt-3 text-center opacity-0 animate-fade-up"
         style={{ animationDelay: "600ms" }}
