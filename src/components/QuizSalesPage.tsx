@@ -66,6 +66,22 @@ interface QuizSalesPageProps {
   answers: number[];
 }
 
+const CtaButton = ({ text, delay }: { text: string; delay?: string }) => (
+  <a
+    href={CHECKOUT_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={() => {
+      const fbq = getFbq();
+      fbq("track", "InitiateCheckout");
+    }}
+    className="opacity-0 animate-fade-up w-full max-w-sm block text-center px-10 py-5 bg-primary text-primary-foreground font-body font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110 hover:scale-[1.02] active:scale-[0.98]"
+    style={delay ? { animationDelay: delay } : undefined}
+  >
+    {text}
+  </a>
+);
+
 const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
   const profile = useMemo(() => {
     const scores = [0, 0, 0, 0];
@@ -74,6 +90,7 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
     });
     return salesProfiles[scores.indexOf(Math.max(...scores))];
   }, [answers]);
+
   return (
     <div
       className={`min-h-[80vh] flex flex-col items-center pt-8 transition-opacity duration-400 ${
@@ -82,36 +99,34 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
     >
       <div className="w-16 h-0.5 bg-primary mx-auto mb-8 opacity-0 animate-fade-up" />
 
+      {/* HEADLINE */}
       <h2
         className="font-display text-2xl md:text-3xl font-semibold text-foreground text-center leading-tight mb-4 opacity-0 animate-fade-up"
         style={{ animationDelay: "100ms" }}
       >
-        Você não precisa continuar se sentindo assim
+        Com base no seu resultado, identificamos o que está travando sua vida hoje
       </h2>
 
+      {/* SUBHEADLINE + URGÊNCIA + CONEXÃO */}
       <div
         className="space-y-4 text-center mb-8 opacity-0 animate-fade-up"
         style={{ animationDelay: "200ms" }}
       >
         <p className="font-body text-base text-muted-foreground leading-relaxed">
-          Existe um caminho claro para{" "}
-          <span className="font-semibold text-foreground">
-            {profile.emphasis}
-          </span>{" "}
-          e {profile.reward}.
+          Hoje você está vivendo um bloqueio que está afetando sua paz, sua clareza e sua direção.
         </p>
-        <p className="font-body text-base text-foreground leading-relaxed font-medium">
-          Com base no seu resultado, esse é o próximo passo ideal pra você.
+        <p className="font-body text-sm text-destructive/80 leading-relaxed font-medium">
+          E se isso não for tratado, essa sensação tende a continuar.
         </p>
-        <p className="font-body text-sm text-muted-foreground leading-relaxed">
-          Esse Livro foi criado para te guiar passo a passo na sua restauração
-          espiritual.
+        <p className="font-body text-base text-foreground leading-relaxed font-semibold">
+          Mas existe um caminho claro para{" "}
+          <span className="text-primary">{profile.emphasis}</span> e {profile.reward}.
         </p>
       </div>
 
       {/* Ebook 3D Mockup */}
       <div
-        className="w-full max-w-sm mb-10 opacity-0 animate-fade-up relative"
+        className="w-full max-w-sm mb-4 opacity-0 animate-fade-up relative"
         style={{ animationDelay: "300ms" }}
       >
         <div className="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-110 -z-10" />
@@ -121,27 +136,21 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
           className="w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] hover:drop-shadow-[0_25px_50px_rgba(0,0,0,0.2)] transition-all duration-500 hover:scale-[1.02]"
           loading="lazy"
         />
-        <a
-          href={CHECKOUT_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => {
-            const fbq = getFbq();
-            fbq("track", "InitiateCheckout");
-          }}
-          className="mt-6 w-full max-w-xs block text-center px-8 py-4 bg-primary text-primary-foreground font-body font-bold text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
-        >
-          👉 Quero começar minha restauração agora
-        </a>
       </div>
 
-      {/* Benefits */}
+      {/* CTA abaixo do mockup */}
+      <div className="w-full flex justify-center mb-10">
+        <CtaButton text="👉 Quero resolver isso agora" delay="350ms" />
+      </div>
+
+      {/* Descrição do produto */}
       <div
         className="w-full bg-card rounded-lg p-6 mb-8 border border-border opacity-0 animate-fade-up"
         style={{ animationDelay: "400ms" }}
       >
-        <p className="font-display text-lg font-semibold text-foreground mb-4 text-center">
-          Dentro do ebook você encontrará:
+        <p className="font-body text-base text-muted-foreground leading-relaxed mb-4 text-center">
+          O Livro <span className="font-semibold text-foreground">"À Mesa"</span> foi criado para te{" "}
+          <span className="font-bold text-foreground uppercase">guiar passo a passo</span> nesse processo de restauração espiritual.
         </p>
         <ul className="space-y-3">
           {[
@@ -161,10 +170,34 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
         </ul>
       </div>
 
+      {/* Bônus */}
+      <div
+        className="w-full bg-primary/5 rounded-lg p-6 mb-8 border border-primary/20 opacity-0 animate-fade-up"
+        style={{ animationDelay: "450ms" }}
+      >
+        <p className="font-display text-lg font-semibold text-foreground mb-2 text-center">
+          🎁 Bônus exclusivo
+        </p>
+        <p className="font-body text-sm text-foreground text-center font-medium">
+          Guia prático: como se aproximar de Deus em 7 dias
+        </p>
+        <p className="font-body text-xs text-primary font-semibold text-center mt-1">
+          Incluído gratuitamente hoje
+        </p>
+      </div>
+
+      {/* Prova social */}
+      <p
+        className="font-body text-sm text-muted-foreground italic text-center mb-4 opacity-0 animate-fade-up"
+        style={{ animationDelay: "500ms" }}
+      >
+        Mais de 1.193 mulheres já iniciaram esse processo
+      </p>
+
       {/* Testimonials */}
       <div
         className="w-full mb-8 opacity-0 animate-fade-up"
-        style={{ animationDelay: "500ms" }}
+        style={{ animationDelay: "550ms" }}
       >
         <p className="font-display text-lg font-semibold text-foreground mb-5 text-center">
           O que dizem as leitoras:
@@ -209,40 +242,54 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
         </div>
       </div>
 
-      {/* Social proof */}
-      <p
-        className="font-body text-sm text-muted-foreground italic text-center mb-4 opacity-0 animate-fade-up"
-        style={{ animationDelay: "550ms" }}
-      >
-        Mais de 1.193 mulheres já iniciaram esse processo
-      </p>
-
-      {/* Price */}
-      <p
-        className="font-body text-xs text-primary font-semibold tracking-wide uppercase text-center mb-6 animate-gold-pulse opacity-0 animate-fade-up"
+      {/* Bloco pré-checkout (urgência) */}
+      <div
+        className="w-full bg-destructive/5 rounded-lg p-6 mb-8 border border-destructive/20 opacity-0 animate-fade-up"
         style={{ animationDelay: "600ms" }}
       >
-        Por apenas R$ 27,00
-      </p>
+        <p className="font-display text-base font-semibold text-foreground mb-3 text-center">
+          ⚠️ Atenção:
+        </p>
+        <p className="font-body text-sm text-muted-foreground leading-relaxed text-center mb-3">
+          Com base nas suas respostas, ignorar isso agora pode fazer você continuar se sentindo exatamente da mesma forma.
+        </p>
+        <p className="font-body text-sm text-foreground font-medium text-center mb-1">
+          Você já identificou o que está te travando.
+        </p>
+        <p className="font-body text-sm text-foreground font-semibold text-center">
+          Agora só falta dar o próximo passo.
+        </p>
+      </div>
 
-      {/* CTA */}
-      <a
-        href={CHECKOUT_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => {
-          const fbq = getFbq();
-          fbq("track", "InitiateCheckout");
-        }}
-        className="opacity-0 animate-fade-up w-full max-w-sm block text-center px-10 py-5 bg-primary text-primary-foreground font-body font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:brightness-110 hover:scale-[1.02]"
-        style={{ animationDelay: "650ms" }}
+      {/* CTA pré-checkout */}
+      <div className="w-full flex justify-center mb-8">
+        <CtaButton text="👉 Quero começar minha transformação agora" delay="650ms" />
+      </div>
+
+      {/* Oferta / Preço */}
+      <div
+        className="text-center mb-6 opacity-0 animate-fade-up"
+        style={{ animationDelay: "700ms" }}
       >
-        👉 Quero começar minha restauração agora
-      </a>
+        <p className="font-body text-sm text-muted-foreground line-through mb-1">
+          De R$ 47,00
+        </p>
+        <p className="font-display text-2xl font-bold text-foreground">
+          Hoje apenas: <span className="text-primary">R$ 27,00</span>
+        </p>
+        <p className="font-body text-xs text-muted-foreground mt-1">
+          Depois pode voltar ao valor normal
+        </p>
+      </div>
+
+      {/* CTA principal */}
+      <div className="w-full flex justify-center">
+        <CtaButton text="👉 Quero sair disso agora" delay="750ms" />
+      </div>
 
       <p
         className="font-body text-xs text-muted-foreground/60 mt-4 text-center opacity-0 animate-fade-up"
-        style={{ animationDelay: "700ms" }}
+        style={{ animationDelay: "800ms" }}
       >
         Acesso imediato após a confirmação do pagamento
       </p>
@@ -250,7 +297,7 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
       {/* Garantia */}
       <div
         className="flex flex-col items-center mt-8 mb-8 opacity-0 animate-fade-up"
-        style={{ animationDelay: "750ms" }}
+        style={{ animationDelay: "850ms" }}
       >
         <div className="w-16 h-16 rounded-full border-2 border-primary/40 flex items-center justify-center mb-3">
           <svg
