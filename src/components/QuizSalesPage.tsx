@@ -266,16 +266,22 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
         style={{ animationDelay: "600ms" }}
       >
         <p className="font-display text-base font-semibold text-foreground mb-3 text-center">
-          ⚠️ Atenção:
+          ⚠️ Uma última coisa:
         </p>
-        <p className="font-body text-sm text-muted-foreground leading-relaxed text-center mb-3">
-          Com base nas suas respostas, ignorar isso agora pode fazer você continuar se sentindo exatamente da mesma forma.
+        <p className="font-body text-sm text-muted-foreground leading-relaxed text-center mb-2">
+          Você acabou de identificar o que está te travando.
         </p>
-        <p className="font-body text-sm text-foreground font-medium text-center mb-1">
-          Você já identificou o que está te travando.
+        <p className="font-body text-sm text-foreground font-medium text-center mb-2">
+          Essa clareza é um presente — mas ela só transforma se você agir.
+        </p>
+        <p className="font-body text-sm text-muted-foreground leading-relaxed text-center mb-2">
+          Muitas mulheres chegam até aqui, reconhecem a dor... e fecham a aba.
+        </p>
+        <p className="font-body text-sm text-muted-foreground leading-relaxed text-center mb-2">
+          Seis meses depois, ainda sentem o mesmo peso.
         </p>
         <p className="font-body text-sm text-foreground font-semibold text-center">
-          Agora só falta dar o próximo passo.
+          Agora é diferente. Agora você sabe. E sabe o que fazer.
         </p>
       </div>
 
