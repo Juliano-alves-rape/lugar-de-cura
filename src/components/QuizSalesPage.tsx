@@ -9,18 +9,22 @@ const salesProfiles = [
   {
     emphasis: "curar suas feridas emocionais",
     reward: "viver com leveza e liberdade interior",
+    headlineSuffix: "feridas que ainda precisam de cura.",
   },
   {
     emphasis: "restaurar sua identidade em Deus",
     reward: "viver com direção e segurança",
+    headlineSuffix: "uma identidade que precisa ser restaurada.",
   },
   {
     emphasis: "se reconectar profundamente com Deus",
     reward: "sentir Sua presença de forma real",
+    headlineSuffix: "uma distância de Deus que pode ser curada.",
   },
   {
     emphasis: "descobrir seu propósito",
     reward: "caminhar com clareza e confiança",
+    headlineSuffix: "um propósito esperando pra ser revelado.",
   },
 ];
 
