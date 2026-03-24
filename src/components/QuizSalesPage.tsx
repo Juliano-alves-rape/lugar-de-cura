@@ -148,6 +148,19 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
         <CtaButton text="👉 Quero resolver isso agora" delay="350ms" />
       </div>
 
+      {/* Autora */}
+      <div
+        className="w-full bg-card rounded-lg p-6 mb-8 border border-border opacity-0 animate-fade-up"
+        style={{ animationDelay: "380ms" }}
+      >
+        <p className="font-display text-lg font-semibold text-foreground mb-3 text-center">
+          Quem escreveu esse livro
+        </p>
+        <p className="font-body text-sm text-muted-foreground leading-relaxed text-center">
+          Sara Rapé é pastora, escritora e ministra. Ela não escreveu À Mesa de uma posição de quem já chegou — escreveu como alguém que também precisou sentar à mesa de Deus, enfrentar suas próprias feridas, redescobrir sua identidade e aprender a ouvir a voz dEle novamente. Foi exatamente esse processo que ela colocou neste livro para te guiar.
+        </p>
+      </div>
+
       {/* Descrição do produto */}
       <div
         className="w-full bg-card rounded-lg p-6 mb-8 border border-border opacity-0 animate-fade-up"
