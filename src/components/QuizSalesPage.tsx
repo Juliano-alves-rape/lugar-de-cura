@@ -9,18 +9,22 @@ const salesProfiles = [
   {
     emphasis: "curar suas feridas emocionais",
     reward: "viver com leveza e liberdade interior",
+    headlineSuffix: "feridas que ainda precisam de cura.",
   },
   {
     emphasis: "restaurar sua identidade em Deus",
     reward: "viver com direção e segurança",
+    headlineSuffix: "uma identidade que precisa ser restaurada.",
   },
   {
     emphasis: "se reconectar profundamente com Deus",
     reward: "sentir Sua presença de forma real",
+    headlineSuffix: "uma distância de Deus que pode ser curada.",
   },
   {
     emphasis: "descobrir seu propósito",
     reward: "caminhar com clareza e confiança",
+    headlineSuffix: "um propósito esperando pra ser revelado.",
   },
 ];
 
@@ -104,7 +108,8 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
         className="font-display text-2xl md:text-3xl font-semibold text-foreground text-center leading-tight mb-4 opacity-0 animate-fade-up"
         style={{ animationDelay: "100ms" }}
       >
-        Com base no seu resultado, identificamos o que está travando sua vida hoje
+        Com base no seu resultado, identificamos o que está travando sua vida hoje:{" "}
+        <span className="text-primary font-bold">{profile.headlineSuffix}</span>
       </h2>
 
       {/* SUBHEADLINE + URGÊNCIA + CONEXÃO */}

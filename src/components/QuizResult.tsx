@@ -11,37 +11,45 @@ const resultProfiles = [
     title: "Cura Interior",
     icon: "💛",
     description:
-      "Você carrega dores emocionais que ainda não foram tratadas. Deus quer te conduzir a um processo profundo de cura.",
+      "Você carrega dores emocionais que ainda não foram tratadas — e elas estão pesando mais do que você percebe. Não é fraqueza. É uma ferida que ainda não recebeu cuidado. Deus viu cada coisa que te machucou. E Ele não quer que você continue carregando isso sozinha.",
     cta: "Quero começar minha cura",
     verse:
       '"Ele sara os quebrantados de coração e lhes pensa as feridas." — Salmos 147:3',
+    boxText:
+      "O livro À Mesa foi escrito exatamente para mulheres com esse resultado. Sara Rapé te guia por um processo de cura interior profundo — reconhecendo as feridas, entendendo o que Deus diz sobre elas, e encontrando liberdade real pela Palavra. Não é teoria. É um caminho prático, guiado pela Escritura, para você sair do peso emocional e voltar a viver com leveza.",
   },
   {
     title: "Restauração da Identidade",
     icon: "👑",
     description:
-      "Você está vivendo um momento de desconexão com quem Deus te chamou pra ser. É hora de redescobrir sua identidade como filha amada.",
+      "Você sente que se perdeu pelo caminho. Que a mulher que Deus te chamou a ser parece distante — ou talvez você nem saiba mais quem ela é. Isso não é acidente. Há um processo que te tirou de si mesma. E há um processo que pode te trazer de volta.",
     cta: "Quero restaurar minha identidade",
     verse:
       '"Mas vós sois geração eleita, sacerdócio real, nação santa." — 1 Pedro 2:9',
+    boxText:
+      "O livro À Mesa tem um capítulo inteiro dedicado à identidade — quem você é em Deus, o que o inimigo tentou roubar e como você reconstrói quem você é a partir da Palavra. Sara Rapé escreve como alguém que também precisou redescobrir sua identidade. Ela não fala de fora — ela te acompanha de dentro.",
   },
   {
     title: "Reconexão Espiritual",
     icon: "🕊️",
     description:
-      "Você sente que perdeu sua conexão com Deus. Ele está te chamando de volta para perto dEle.",
+      "Você ora, mas parece que as palavras não chegam. Você sente que algo criou distância entre você e Deus — e não sabe exatamente quando isso aconteceu. A boa notícia é que Ele não se afastou. Ele está esperando você à mesa.",
     cta: "Quero me reconectar com Deus",
     verse:
       '"Chegai-vos a Deus, e ele se chegará a vós." — Tiago 4:8',
+    boxText:
+      "O livro À Mesa nasceu dessa imagem: Deus te convidando para sentar com Ele. Sem pressa, sem performance, sem distância. Sara Rapé te mostra como voltar a esse lugar de intimidade — como ouvir a voz dEle novamente, como construir uma vida de presença real e não apenas de rituais.",
   },
   {
     title: "Direção e Propósito",
     icon: "🔥",
     description:
-      "Você sabe que tem algo maior, mas não consegue viver isso. Deus quer te dar clareza e direção.",
+      "Você sabe que foi chamada para algo maior. Mas parece que esse propósito está trancado atrás de uma porta que você não consegue abrir. Você anda em círculos, esperando uma clareza que não chega. Deus tem planos claros pra você. E Ele quer te mostrar.",
     cta: "Quero descobrir meu propósito",
     verse:
       '"Eu é que sei os planos que tenho para vocês... planos de dar-lhes esperança e um futuro." — Jeremias 29:11',
+    boxText:
+      "O livro À Mesa te ajuda a sentar diante de Deus e ouvir o que Ele tem a dizer sobre o seu chamado. Sara Rapé te guia pelo processo de curar o que está travando, descobrir quem você é, e começar a caminhar na direção certa — com paz e sem pressa.",
   },
 ];
 
@@ -109,7 +117,7 @@ const QuizResult = ({ transitioning, answers, onContinue }: QuizResultProps) => 
           Existe um caminho para essa restauração.
         </p>
         <p className="font-body text-sm text-muted-foreground text-center">
-          Com base no seu resultado, esse é o próximo passo ideal pra você.
+          {profile.boxText}
         </p>
       </div>
 
