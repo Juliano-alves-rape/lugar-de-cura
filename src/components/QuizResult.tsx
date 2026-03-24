@@ -117,7 +117,7 @@ const QuizResult = ({ transitioning, answers, onContinue }: QuizResultProps) => 
           Existe um caminho para essa restauração.
         </p>
         <p className="font-body text-sm text-muted-foreground text-center">
-          Com base no seu resultado, esse é o próximo passo ideal pra você.
+          {profile.boxText}
         </p>
       </div>
 

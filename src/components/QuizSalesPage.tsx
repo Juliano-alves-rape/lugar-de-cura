@@ -108,7 +108,8 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
         className="font-display text-2xl md:text-3xl font-semibold text-foreground text-center leading-tight mb-4 opacity-0 animate-fade-up"
         style={{ animationDelay: "100ms" }}
       >
-        Com base no seu resultado, identificamos o que está travando sua vida hoje
+        Com base no seu resultado, identificamos o que está travando sua vida hoje:{" "}
+        <span className="text-primary font-bold">{profile.headlineSuffix}</span>
       </h2>
 
       {/* SUBHEADLINE + URGÊNCIA + CONEXÃO */}
