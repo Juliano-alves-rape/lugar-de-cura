@@ -183,11 +183,11 @@ const QuizApp = () => {
                   Descubra em 2 minutos o que está travando sua vida espiritual
                 </h1>
                 <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-                  Responda 5 perguntas rápidas e veja o que Deus quer restaurar
+                  Responda 8 perguntas rápidas e veja o que Deus quer restaurar e veja o que Deus quer restaurar
                   em você hoje
                 </p>
                 <p className="font-body text-sm text-muted-foreground/80">
-                  ✨ Mais de 1.193 mulheres já fizeram esse teste
+                  ✨ Mais de 397 mulheres já fizeram esse teste
                 </p>
               </div>
 

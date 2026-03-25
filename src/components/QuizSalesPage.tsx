@@ -209,7 +209,7 @@ const QuizSalesPage = ({ transitioning, answers }: QuizSalesPageProps) => {
         className="font-body text-sm text-muted-foreground italic text-center mb-4 opacity-0 animate-fade-up"
         style={{ animationDelay: "500ms" }}
       >
-        Mais de 1.193 mulheres já iniciaram esse processo
+        Mais de 397 mulheres já iniciaram esse processo
       </p>
 
       {/* Testimonials */}
