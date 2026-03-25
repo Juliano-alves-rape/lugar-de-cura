@@ -54,6 +54,36 @@ const questions = [
       "Acho que sim",
     ],
   },
+  {
+    question:
+      "Esse peso que você sente hoje está afetando outras áreas da sua vida?",
+    options: [
+      "Sim, afeta meus relacionamentos e minha paz",
+      "Sim, me impede de viver o que acredito",
+      "Às vezes, mas tento ignorar",
+      "Ainda não parei para pensar nisso",
+    ],
+  },
+  {
+    question:
+      "O que acontece quando você tenta resolver isso sozinha?",
+    options: [
+      "Melhora um pouco, mas volta",
+      "Não consigo nem começar",
+      "Fico em círculos sem sair do lugar",
+      "Nunca tentei resolver, não sei como",
+    ],
+  },
+  {
+    question:
+      "Se daqui a 6 meses nada mudar, como você se sentirá?",
+    options: [
+      "Muito mais cansada e pesada",
+      "Com medo de perder minha fé",
+      "Distante de quem Deus quer que eu seja",
+      "Sem direção, vivendo no automático",
+    ],
+  },
 ];
 
 type Screen = "intro" | "quiz" | "patternBreak" | "analysis" | "result" | "sales";
