@@ -187,7 +187,7 @@ const QuizApp = () => {
                   em você hoje
                 </p>
                 <p className="font-body text-sm text-muted-foreground/80">
-                  ✨ Mais de 1.193 mulheres já fizeram esse teste
+                  ✨ Mais de 397 mulheres já fizeram esse teste
                 </p>
               </div>
 
